@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget Tracker</title>
+    <!-- Custom Typography Pairing (Poppins for headings, Inter for body/inputs) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Distinct Visual Card 1: Page Heading -->
+    <header id="main-header">
+        <h1>My Budget Tracker</h1>
+        <p>Track your income and expenses in one place cleanly.</p>
+    </header>
+
+    <main>
+        
+        <!-- Distinct Visual Card 2: Add Expense Form -->
+        <section class="add-expense-section">
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <div class="input-group">
+                    <label for="expense-name">Expense Name:</label>
+                    <input type="text" id="expense-name" placeholder="e.g., Groceries">
+                </div>
+
+                <div class="input-group">
+                    <label for="expense-amount">Amount:</label>
+                    <input type="number" id="expense-amount" placeholder="e.g., 45.00">
+                </div>
+
+                <div class="input-group">
+                    <label for="expense-category">Category:</label>
+                    <select id="expense-category">
+                        <option value="food">Food</option>
+                        <option value="rent">Rent</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="entertainment">Entertainment</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="btn-submit">Add Transaction</button>
+            </form>
+        </section>
+
+        <!-- Distinct Visual Card 3: The Expense Table -->
+        <section class="expenses-placeholder-section">
+            <h2>Your Expenses</h2>
+            
+            <table class="expense-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Supermarket Groceries</td>
+                        <td>Food</td>
+                        <td class="amount text-danger">-$45.00</td>
+                    </tr>
+                    <tr>
+                        <td>Internet Bill</td>
+                        <td>Utilities</td>
+                        <td class="amount text-danger">-$60.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+</html>
